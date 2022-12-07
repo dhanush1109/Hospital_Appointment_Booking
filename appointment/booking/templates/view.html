@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index Page</title>
+        <style>
+            h1{margin-top: -20px;}
+            #table1{
+                align-self: center;
+            }
+        body{
+            margin-left:200px;
+            background:#5d9ab2 url(https://cdn5.vectorstock.com/i/1000x1000/20/99/doctors-and-patients-cartoon-in-front-hospital-vector-27042099.jpg) center;
+            object-fit: fill;
+            }
+            #container1{   
+               padding-top: 20px;
+               padding-left: 300px;
+            }
+            /* #container{
+                background-color: rgb(0, 110, 255);
+                display: flex;
+                margin-right: auto;
+                margin-left: 350px;
+                width: 380px;
+                height: 400px;
+                padding: 45px;
+                font-size: 20px;
+                font-weight: bold;
+                border-radius: 10px;
+                color: rgb(255, 255, 255);
+            } */
+            .table1{
+                margin-left:20px;
+                margin-right: -400px;
+                width: 1000px;
+                height: 20px;
+                table-layout: auto;
+                border-collapse: collapse;
+            }
+            table,th,td{
+                border-radius: 50px;
+                border-style: groove;
+                text-align: center;  
+            }
+            button{
+                display: flex;
+                margin-top: 380px;
+                margin-left: 70px;
+                margin-right: -40px;
+                
+                border-radius: 4px;
+                border: none;
+                text-align: center;
+                
+                font-size: 20px;
+                padding: 0px;
+                width: auto;
+                
+            }
+            a{
+                color: antiquewhite;
+                background-color: #0ded15;
+                text-decoration: none;
+                width: 200px;
+                height: 30px;
+                font-size: medium;
+                margin-bottom: 50px;
+                margin-top: auto;
+            }
+
+            a:hover{
+                color: rgb(0, 8, 255);
+                background-color: palevioletred;
+            }
+            
+        </style>
+    </head>
+    
+    <body >
+        <div id="container1">
+            <h1 >Booking Details</h1>
+
+        </div>
+    <br><br>
+        
+ 
+<table class="table1">
+  
+    <th>Patient Name</th>
+    <th>Conatact Number</th>
+    <th>Age</th>
+    <th>Reason</th>
+{% for x in patients %}
+<tr>
+
+<td>{{ x.name }}</td>
+<td>{{ x.contactno }}</td>
+<td>{{ x.age }}</td>
+<td>{{ x.reason }}</td>
+</tr>
+{% endfor %}
+</table>
+<br><br>
+
+
+
+</body>
+</html>

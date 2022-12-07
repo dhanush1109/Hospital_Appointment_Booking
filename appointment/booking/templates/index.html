@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Book an Appointment (Apollo)</title>
+        <style>
+        /* body{
+            background:#5d9ab2 url(https://img.favpng.com/3/10/15/clip-art-homework-portable-network-graphics-child-student-png-favpng-kF8hDY3M76e9ZZxgHWyQWW3U8.jpg);
+                }            */
+            h1{
+                font-size: 40px;
+                text-align:center;
+                font-style: oblique;
+                text-decoration: underline;
+            }
+            #container{
+                background-color: rgb(245, 197, 197);
+                display: flex;
+                margin-right: auto;
+                margin-left: auto;
+                width: 250px;
+                padding: 50px;
+                font-size: 20px;
+                font-weight: bold;
+                border-radius: 8px;
+                color: rgb(230, 1, 1);
+                text-decoration:double;
+            }
+            #submit{
+                font-style: oblique;
+                font-size: small;
+                color: red
+            }
+            #submit:hover{
+                color: rgb(8, 166, 32);
+                background-color: rgb(240, 252, 0);
+            }
+            .login{
+            margin-left: 700px;
+            margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body style="background-color:rgb(255, 255, 255);">
+              
+                <h1>Book an Appointment (Apollo)</h1>
+<button class="login"><a href="login/">Admin Login</a></button>
+        <div id="container">
+            <form action="book/" method="post">
+                {% csrf_token %}
+                Name:<br>
+                <input name="name" type="text" required>
+                <br><br>
+                Contact No.:<br>
+                <input type="tel" name="contactno" placeholder="0123-456-789" required>
+                <br><br>
+                Age:<br>
+                <input name ="age" type="text" placeholder="10" required>
+                <br><br>
+                Reason:<br>
+                <input name="reason" type="text" required>
+                <br><br>
+                <input type="submit" value="Submit" id="submit">
+                </form>
+        </div>
+    </body>
+</html>
